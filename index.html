@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url(http://images2.fanpop.com/image/photos/13900000/The-Rose-of-Love-roses-13967007-1024-768.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+        header{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="card  w-50 m-auto text-center">
+            <div class="card-header bg-danger text-white" >LOVE CALCULATOR</div>
+            <div class="card-body"></div>
+            <form class="form-inline w-75 m-auto ">
+                <div class="form-group">
+                    <input type="text" class="form-control text-center" placeholder="Your Name" id="name">
+                    </div>
+
+                    <div><span class="pl-4 pr-4"> + </span></div>
+
+                    <div class="form-group">
+                        <input type="text"  class="form-control text-center" placeholder="Love Name" id="lname">
+                        </div>
+
+            </form>
+            <br>
+<div class="w-75 m-auto">
+    <button class="btn btn-success w-50" onclick="checklove()">click</button>
+
+</div>
+<br>
+<div>
+    <input type="text" name="" id="lovevalue" class="form-control text-center w-25 m-auto" placeholder="Love Percentage">
+</div>
+
+
+            <div class="card-footer">GOD BLESS YOUR RELATIONSHIP</div>
+          </div>
+    </header>
+
+    <script>
+function checklove(){
+
+
+let name = document.getElementById("name").value;
+let lname = document.getElementById("lname").value;
+
+if(name== ""){
+    
+
+    alert("please enter your name");
+
+}else if(name.length <=3){
+alert("min length is 4");
+
+
+}else if(!isNaN(name)){
+alert("numbers are not allowed");
+
+}
+else if(lname == ""){
+    alert("please enter your love name");
+
+}else if(lname.length <=3){
+alert("min length is 4");
+
+}else if(!isNaN(lname)){
+alert("numbers are not allowed");
+
+}else{
+    let lovedata = Math.random()*100;
+            lovedata = Math.floor(lovedata);
+            document.getElementById("lovevalue").value = lovedata+"%";
+}
+
+
+        
+            
+        }
+    </script>
+    
+</body>
+</html>
